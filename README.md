@@ -4,6 +4,18 @@
 </p>
 
 # Índice
+
+- [Introducción](#Introducción)
+- [Desarrollo](#Desarrollo)
+  - [ETL](#ETL)
+  - [EDA](#EDA)
+  - [Dashboard](#Dashboard)
+  - [Modelo](#Modelo)
+  - [Deploy](#Deploy)
+- [Tecnologías](#Tecnologías)
+- [Conclusiones](#Conclusiones)
+- [Equipo](#Equipo)
+- 
 # Introducción
 # Desarrollo
 ## ETL
@@ -11,5 +23,6 @@
 ## Dashboard
 ## Modelo
 ## Deploy
+# Tecnologías
 # Conclusiones
 # Equipo
