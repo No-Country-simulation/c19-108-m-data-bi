@@ -6,6 +6,8 @@
 # Índice
 
 - [Introducción](#Introducción)
+- [Objetivos](#Objetivos)
+- [Datos](#Datos)
 - [Desarrollo](#Desarrollo)
   - [ETL](#ETL)
   - [EDA](#EDA)
@@ -17,6 +19,8 @@
 - [Equipo](#Equipo)
 
 # Introducción
+# Objetivos
+# Datos
 # Desarrollo
 ## ETL
 ## EDA
