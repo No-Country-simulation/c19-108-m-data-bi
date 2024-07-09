@@ -79,7 +79,7 @@
       <a href="https://github.com/nicolebendel"><img src="assets/github.png" style="width:20px;"></a>
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/106486985?s=400&u=f2b5a4953b674b71e5df9e4c71c89ee2ae75fa65&v=4" width="200" height="200"><br><strong>Malena</strong><br>
+      <img src="https://www.linkedin.com/in/malena-jara?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADzd-TcB-trY9scuoEDx7uMeEP4GIN9gDP0&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BETQNu9cwRICQnfekI%2FnYSQ%3D%3D" width="200" height="200"><br><strong>Malena</strong><br>
       <a href="https://www.linkedin.com/in/malena-jara"><img src="assets/linkedin.png" style="width:20px;"></a>
       <a href="https://github.com/Malena646"><img src="assets/github.png" style="width:20px;"></a>
     </td>
