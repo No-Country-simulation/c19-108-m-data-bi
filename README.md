@@ -63,9 +63,9 @@
       <a href="https://github.com/AngelTroncoso"><img src="assets/github.png" style="width:20px;"></a>
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/109807315?v=4" width="200" height="200"><br><strong>Ana</strong><br>
-      <a href="http://www.linkedin.com/anaherrerachuica"><img src="assets/linkedin.png" style="width:20px;"></a>
-      <a href="https://github.com/AnaHerreraC"><img src="assets/github.png" style="width:20px;"></a>
+      <img src="https://avatars.githubusercontent.com/u/131561932?v=4" width="200" height="200"><br><strong>Malena</strong><br>
+      <a href="https://www.linkedin.com/in/malena-jara"><img src="assets/linkedin.png" style="width:20px;"></a>
+      <a href="https://github.com/Malena646"><img src="assets/github.png" style="width:20px;"></a>
     </td>
   </tr>
 </table>
@@ -79,9 +79,9 @@
       <a href="https://github.com/nicolebendel"><img src="assets/github.png" style="width:20px;"></a>
     </td>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/131561932?v=4" width="200" height="200"><br><strong>Malena</strong><br>
-      <a href="https://www.linkedin.com/in/malena-jara"><img src="assets/linkedin.png" style="width:20px;"></a>
-      <a href="https://github.com/Malena646"><img src="assets/github.png" style="width:20px;"></a>
+      <img src="https://avatars.githubusercontent.com/u/109807315?v=4" width="200" height="200"><br><strong>Ana</strong><br>
+      <a href="http://www.linkedin.com/anaherrerachuica"><img src="assets/linkedin.png" style="width:20px;"></a>
+      <a href="https://github.com/AnaHerreraC"><img src="assets/github.png" style="width:20px;"></a>
     </td>
     <td align="center">
       <img src="https://avatars.githubusercontent.com/u/158371081?v=4" width="200" height="200"><br><strong>Jitzua</strong><br>
