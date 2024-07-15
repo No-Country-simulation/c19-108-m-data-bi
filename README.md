@@ -39,8 +39,6 @@
 # Datos
 # Desarrollo
 ## ETL
-
-holA COMO ANDAS
 ## EDA
 ## Dashboard
 ## Modelo
