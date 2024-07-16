@@ -480,7 +480,7 @@ def descripcion_distribucion(df: pd.DataFrame):
             # Gráfico de barras
             plt.subplot(1, 2, 1)
             ax = sns.barplot(x=muestra.index, y=muestra.values, data=muestra.to_frame().reset_index())
-            ax.set_title(f'Gráfico de distribución de frecuencias (primeros 5 valores) {columna}')
+            ax.set_title(f'Gráfico de distribución de frecuencias (primeros 10 valores) {columna}')
             ax.set_xlabel(columna)
             ax.set_ylabel('Cantidad de frecuencias')
             plt.xticks(rotation=45)
@@ -492,7 +492,7 @@ def descripcion_distribucion(df: pd.DataFrame):
             except ValueError:
                 muestra = muestra[:5]  # Tomar solo las 5 categorías principales
                 plt.pie(x=muestra, labels=muestra.index, shadow=True, autopct='%1.1f%%')
-            plt.title('Distribución Relativa de Valores')
+            plt.title('Distribución Relativa de Valores (primeros 5)')
             plt.xlabel(columna)
             plt.xticks(rotation=45)
             plt.grid()
@@ -502,19 +502,18 @@ def descripcion_distribucion(df: pd.DataFrame):
             sns.boxplot(x=df[columna])
             plt.title(f'Diagrama de caja para {columna}')
 
-            # Gráfico de torta para las proporciones representativas de los datos
+
+            # Grafico de densidad para representar la distribucion de frecuencias
             plt.subplot(1, 2, 2)
-            try:
-                plt.pie(x=muestra, labels=muestra.index, shadow=True, autopct='%1.1f%%')
-            except ValueError:
-                muestra = muestra[:5]  # Tomar solo las 5 categorías principales
-                plt.pie(x=muestra, labels=muestra.index, shadow=True, autopct='%1.1f%%')
-            plt.title('Distribución Relativa de Valores')
+            sns.kdeplot(df[columna], shade= True)
+            plt.title(f'Gráfico de Densidad para {columna}')
             plt.xlabel(columna)
+            plt.ylabel('frecuencias')
             plt.xticks(rotation=45)
             plt.grid()
 
-
+        # Ajustamos los graficos 
+        plt.tight_layout()
         # Mostrar el gráfico
         plt.show()
 
