@@ -54,6 +54,33 @@ Los principales objetivos que y condiciones en este sentido son:
 
 # Datos
 
+En Principio, los datos con los que contamos y vamos a trabajar referidos a la tematica de proyecto, son de diferentes origenes, aunque principalmente se obtienen de la plataforma web de datos publicos de la nacion (tanto en Datos Argentina como en los diferenetes ministerios o la plataforma de la nación)
+
+Detallamos los origenes principales:
+* https://kaggle.com/
+* https://datos.gob.ar/
+* https://www.argentina.gob.ar/
+* https://nasdaq.com
+* https://inversores.ypf.com/informacion-financiera.html
+
+Como se hace notar, nos centramos en la data de empresas petroleras que estan asentadas en Argentina, ya que va a ser nuestro contexto de analisis (el objeto de estudio se centra principalmente en la empresa YPF)
+
+La data apunta a el estado general de actividad productiva, el estado financiero y/o contable de la empresa y su capital-infraestructura, la proyeccion de produccion y creciemiento, las inversiones que realiza, la cotizacion en bolsa, etc... todo esto, pertinente para tener un panorama claro del estado general de la empresa a evaluar.
+
+Los datos con los que se trabaja son:
+
+* Inversiones de empresas petroleras en Argentina (desde el año 2020 hasta el año 2024)
+* Informacion contable sobre YPF
+* Cotizaciones de diversas empresas petroleras/ de hidrocarburos en bolsas de EEUU
+* Produccion de gas y petroleo en Argentina (desde 2020 hasta 2024)
+* Precio internacional del barril de crudo (desde el año 1970)
+* Consumo internacional de hidrocarburos por pais
+* Reservas de hidrocarburos en Argentina
+* Pozos registrados en el pais
+* Rentas del petroleo en Argentina (en % de PBI)
+
+Mención aparte a los informes o analisis y benchmark de la temática que utilizamos y que no se registran como datos, ya que nos sirven para tener conocimiento y guia del tema en analisis
+y poner en contexto y terminologia, asi como mecanismos y utilizacion de herramientas y logica al material de datos con el que contamos.
 
 
 # Desarrollo
