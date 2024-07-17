@@ -8,7 +8,9 @@ import matplotlib.image as mpimg
 import seaborn as sns
 from collections import Counter
 import re
-
+import openpyxl
+import pyarrow as pa
+import pyarrow.parquet as pq
 
 import warnings
 warnings.filterwarnings(action= 'ignore')
@@ -527,6 +529,50 @@ def descripcion_distribucion(df: pd.DataFrame):
         print('\n')
 
 
+
+#----------------------------------------------------------------------------------------------------
+
+def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start_col: str, etiqueta_año: int):
+
+    # import pandas as pd
+    # import openpyxl
+    # import pyarrow as pa
+    # import pyarrow.parquet as pq
+
+    # import warnings
+    # warnings.filterwarnings(action= 'ignore')
+
+    # Cargar el archivo Excel
+    file_path = path  # path del fichero.xlsx
+    workbook = openpyxl.load_workbook(file_path, data_only=True) # instancio la carga del fichero en una variable
+
+    # Iterar sobre cada hoja del archivo
+    for idx, sheet_name in enumerate(workbook.sheetnames, start=1): # itero sobre cada hoja tomando como referencia las etiquetas de cada una con el metodo sheetnames
+        
+        if idx != n_hoja:  # Solo procesar la tercera hoja
+            continue
+
+        sheet = workbook[sheet_name] # instancio la hoja
+        
+        # Identificar la tabla dinámica (puedes ajustar este criterio según tu necesidad)
+        # Aquí asumimos que la tabla dinámica empieza en la fila 12 y columna A (cambiar según sea necesario)
+        pivot_start_row = start_row
+        pivot_start_col = start_col
+        
+        # Extraer la tabla dinámica
+        pivot_data = []
+        for row in sheet.iter_rows(min_row=pivot_start_row, min_col=openpyxl.utils.cell.column_index_from_string(pivot_start_col), values_only=True):
+            pivot_data.append(row)
+        
+        # Convertir a DataFrame de pandas
+        pivot_df = pd.DataFrame(pivot_data[1:], columns = pivot_data[0])
+
+        archivo= f'../data/raw/inversiones/{sheet_name}_{etiqueta_año}.parquet'
+        pq.write_table(pa.Table.from_pandas(pivot_df), archivo)
+        
+
+    print(f'Nombre de dataframe: {sheet_name} {etiqueta_año}')
+    return pivot_df
 
 #----------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------
