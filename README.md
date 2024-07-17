@@ -35,8 +35,27 @@
 - [Equipo](#Equipo)
 
 # Introducción
+
+El Banco X es una entidad financiera que está ofreciendo creditos para empresas a una tasa de interes muy atractiva como parte de su politica financiera y el contexto economico que se esta dando en Argentina.
+En un principio, centra su oferta de credito en los sectores que potencialmente tienen el mayor salto en el desarrollo y expansión actualmente, como son el sector hidrocarburifero, agricola, minero, de ciencias del conocimiento, etc.
+
+Para ello, necesita un marco de analisis en conjunto con las herramientas necesarias para estimar el riesgo crediticio que conllevaria autorizar un prestamo a una empresa, lo que brindaria seguridad y garantia de pago al momento de otorgarlo.
+
+Por este motivo, nos contrata a nosotros, la consultora AyC para que le brindemos el soporte para esta toma de decisiones.
+
 # Objetivos
+
+Los principales objetivos que y condiciones en este sentido son:
+
+* La construccion de un marco analitico donde se puedan realizar la toma de decision principal (el otorgamiento y autorizacion del credito) tomando en cuenta riesgo y garantia.
+* El estudio exhaustivo de la situacion general y potencial de la empresa en cuestion, que abarque aspectos de capital, financieros, contables, de sector, de produccion, etc
+* La construccion de un modelo o sistema que permita una mirada concisa, precisa y predictiva del comportamiento de la empresa para/con el cumplimiento de pago del prestamo.
+* El asesoramiento de ideas y conclusiones que complementen el marco analitico con informacion util y argumentos concretos para la toma de decisiones.
+
 # Datos
+
+
+
 # Desarrollo
 ## ETL
 ## EDA
@@ -73,11 +92,6 @@
 <!-- Segunda fila -->
 <table>
   <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/153727790?v=4" width="200" height="200"><br><strong>Nicole</strong><br>
-      <a href="LINK-LINKEDIN"><img src="assets/linkedin.png" style="width:20px;"></a>
-      <a href="https://github.com/nicolebendel"><img src="assets/github.png" style="width:20px;"></a>
-    </td>
     <td align="center">
       <img src="https://avatars.githubusercontent.com/u/109807315?v=4" width="200" height="200"><br><strong>Ana</strong><br>
       <a href="http://www.linkedin.com/anaherrerachuica"><img src="assets/linkedin.png" style="width:20px;"></a>
