@@ -45,7 +45,11 @@ Por este motivo, nos contrata a nosotros, la consultora AyC para que le brindemo
 
 # Objetivos
 
-Los principales objetivos que y condiciones en este sentido son:
+<p align = center>
+  <img src= 'assets/banner_consultora_ayc.png' width= 100% >
+</p>
+
+Los principales objetivos y condiciones en este sentido son:
 
 * La construccion de un marco analitico donde se puedan realizar la toma de decision principal (el otorgamiento y autorizacion del credito) tomando en cuenta riesgo y garantia.
 * El estudio exhaustivo de la situacion general y potencial de la empresa en cuestion, que abarque aspectos de capital, financieros, contables, de sector, de produccion, etc
