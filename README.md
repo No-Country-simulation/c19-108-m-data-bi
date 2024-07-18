@@ -103,9 +103,7 @@ Estas acciones en conjunto permitieron la normalizacion, formateo y estructuraci
 |                       |                       |
 |-----------------------|-----------------------|
 | ![Imagen 1](assets/grafico_nulos_1.png) | ![Imagen 2](assets/grafico_nulos_2.png) |
-|                       |
-|-----------------------|
-| Distribucion de los valores de valores nulos, frecuencia y correlacion entre los mismos|
+| Distribucion de los valores de valores nulos| Densidad de valores |
 
 Para completar el camino reaizado en la Extracción, Transformacion y Carga/disponibilización de los datos ponemos a disposicion dos informes concernientes a informar y detallar el estado de los datos en instancias anteriores a su proceso de ETL y posteriores al mismo:
 
