@@ -36,16 +36,20 @@
 
 # Introducción
 
-El Banco X es una entidad financiera que está ofreciendo creditos para empresas a una tasa de interes muy atractiva como parte de su politica financiera y el contexto economico que se esta dando en Argentina.
-En un principio, centra su oferta de credito en los sectores que potencialmente tienen el mayor salto en el desarrollo y expansión actualmente, como son el sector hidrocarburifero, agricola, minero, de ciencias del conocimiento, etc.
+El Banco IPB es una entidad financiera que está ofreciendo creditos para empresas a una tasa de interes muy atractiva como parte de su politica financiera y el contexto economico que se esta dando en Argentina.
+En un principio, centra su oferta de credito en los sectores que potencialmente tienen el mayor salto en el desarrollo y expansión actualmente, como son el sector hidrocarburífero, agricola, minero, de ciencias del conocimiento, etc.
 
-Para ello, necesita un marco de analisis en conjunto con las herramientas necesarias para estimar el riesgo crediticio que conllevaria autorizar un prestamo a una empresa, lo que brindaria seguridad y garantia de pago al momento de otorgarlo.
+Para ello, necesita un marco de análisis en conjunto con las herramientas necesarias para estimar el riesgo crediticio que conllevaria autorizar un prestamo a una empresa, lo que brindaria seguridad y garantia de pago al momento de otorgarlo.
 
 Por este motivo, nos contrata a nosotros, la consultora AyC para que le brindemos el soporte para esta toma de decisiones.
 
 # Objetivos
 
-Los principales objetivos que y condiciones en este sentido son:
+<p align = center>
+  <img src= 'assets/banner_consultora_ayc.png' width= 100% >
+</p>
+
+Los principales objetivos y condiciones en este sentido son:
 
 * La construccion de un marco analitico donde se puedan realizar la toma de decision principal (el otorgamiento y autorizacion del credito) tomando en cuenta riesgo y garantia.
 * El estudio exhaustivo de la situacion general y potencial de la empresa en cuestion, que abarque aspectos de capital, financieros, contables, de sector, de produccion, etc
@@ -85,6 +89,24 @@ y poner en contexto y terminologia, asi como mecanismos y utilizacion de herrami
 
 # Desarrollo
 ## ETL
+
+En la fase de Transformación de Datos (ETL), se llevaron a cabo una serie de procedimientos para garantizar la preparación adecuada y la limpieza exhaustiva de los datos antes de su carga en el almacén de datos. Estas acciones incluyeron:
+
+- Verificación del tipo de datos de cada columna: Se examinó minuciosamente el tipo de datos de cada columna para garantizar su coherencia y precisión en el análisis posterior. 
+- Análisis de la dimensionalidad de los datos: Se exploró la estructura del conjunto de datos para comprender su tamaño y complejidad, lo que permitió una mejor comprensión de la cantidad de registros y variables presentes.
+- Manejo de valores nulos: Se identificaron y abordaron los valores nulos en el conjunto de datos mediante técnicas como la imputación de datos o la eliminación de registros incompletos, con el fin de evitar sesgos o distorsiones en el análisis posterior.
+- Verificación visual de valores atípicos: Se realizó una exploración gráfica de los datos para detectar posibles valores atípicos o anomalías que podrían afectar la integridad y la precisión de los resultados.
+- Indagación de consistencia de los datos: Se llevaron a cabo investigaciones exhaustivas sobre la consistencia de los datos, incluyendo la identificación de máximos, mínimos y rangos de valores para cada variable, lo que ayudó a garantizar la fiabilidad de los datos utilizados en el análisis.
+
+Estas acciones en conjunto permitieron la normalizacion, formateo y estructuracion de los datos que obtuvimos en referencia a la tematica. Esta serie de acciones se pueden ver en el notebook [ETL_ipynb](notebooks/ETL.ipynb) donde tambien estan comentados los cambios realizados a cada archivo y su fundamentación.
+
+Para completar el camino reaizado en la Extracción, Transformacion y Carga/disponibilización de los datos ponemos a disposicion dos informes concernientes a informar y detallar el estado de los datos en instancias anteriores a su proceso de ETL y posteriores al mismo:
+
+-El [Informe ETL_preliminar](notebooks/Informe_ETL_Preliminar.ipynb) proporciona un análisis detallado de la calidad y las características de los datos originales, y ofrece funciones específicas para examinar y explorar los datos en profundidad. Estas funciones incluyen la visualización de valores nulos, análisis de frecuencia de palabras, boxplots numéricos y más, lo que facilita la identificación de patrones, tendencias y relaciones significativas en los datos.
+
+-El [Informe EDA_preliminar](notebooks/EDA_preliminar.ipynb) hace incapie en una instancia intermedia entre la carga y disponibilizacion de los datos y su uso puntual en un informe EDA. En el utilizamos funciones que permiten ver graficamente la distribucion de valores de cada campo en cada fichero y su proporcion en el conjunto total, complementando los mismos con estadísticas básicas de los mismos los que nos permiten tener un panorama general al momento de realizar un análisis mas exhaustivo y complejo, es decir, nos permite aproximarnos a los datos de una manera general en un sentido mucho mas estadistico/analítico previo a su estudio.
+
+
 ## EDA
 ## Dashboard
 ## Modelo
