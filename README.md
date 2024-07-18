@@ -120,7 +120,7 @@ Para completar el camino reaizado en la Extracción, Transformacion y Carga/disp
 |                       |
 |-----------------------|
 | ![Imagen 4 ](assets/distribucion_densidad.png) |
-| Distribucion de frecuencias en un campo con valores proporcionales. Podemos ver en los gráficos la distribucion y densidad de valores |
+| Distribucion de frecuencias en un campo con valores proporcionales. Podemos ver en los gráficos la distribucion y densidad de valores en conjunto con la presencia de outliers y asimetria en la distribución |
 
 
 ## EDA
