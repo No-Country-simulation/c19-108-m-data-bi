@@ -125,6 +125,9 @@ Para completar el camino reaizado en la Extracción, Transformacion y Carga/disp
 
 ## EDA
 ## Dashboard
+
+Disponibilizamos el dashboard [aquí](dashboard/Estudio_Analisis_Riesgo_Crediticio.pbix)
+
 ## Modelo
 ## Deploy
 # Tecnologías
