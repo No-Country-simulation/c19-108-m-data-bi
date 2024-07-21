@@ -291,6 +291,7 @@ def visualizar_nulos(df: pd.DataFrame|None) -> None:
     returns: None
 
     """
+    
 
     fig, axes = plt.subplots(1, 2, figsize=(15, 10))
 
@@ -567,12 +568,26 @@ def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start
         # Convertir a DataFrame de pandas
         pivot_df = pd.DataFrame(pivot_data[1:], columns = pivot_data[0])
 
-        archivo= f'../data/raw/inversiones/{sheet_name}_{etiqueta_año}.parquet'
+        archivo= f'../data/raw/{sheet_name}_{etiqueta_año}.parquet'
         pq.write_table(pa.Table.from_pandas(pivot_df), archivo)
         
 
     print(f'Nombre de dataframe: {sheet_name} {etiqueta_año}')
     return pivot_df
+
+#----------------------------------------------------------------------------------------------------
+
+# Renombrar columnas duplicadas
+def make_unique(column_names):
+    seen = set()
+    for item in column_names:
+        counter = 1
+        new_item = item
+        while new_item in seen:
+            new_item = f"{item}_{counter}"
+            counter += 1
+        seen.add(new_item)
+        yield new_item
 
 #----------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------
