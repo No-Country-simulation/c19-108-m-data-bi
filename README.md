@@ -66,8 +66,10 @@ Detallamos los origenes principales:
 * https://www.argentina.gob.ar/
 * https://nasdaq.com
 * https://inversores.ypf.com/informacion-financiera.html
+* https://datos.enerdata.net/productos-petroliferos/estadisticas-consumo-mundial-petroleo-consumo-domestico.html
+* https://datos.enerdata.net/petroleo-crudo/datos-produccion-energia-mundial.html
 
-Como se hace notar, nos centramos en la data de empresas petroleras que estan asentadas en Argentina, ya que va a ser nuestro contexto de analisis (el objeto de estudio se centra principalmente en la empresa YPF)
+Como se hace notar, nos centramos en la data de empresas petroleras que estan asentadas en Argentina, ya que va a ser nuestro contexto de analisis (el objeto de estudio se centra principalmente en la empresa YPF), aunque complementamos la misma con algunos datos referentes al área (de hidrocarburos), en el contexto global para tomar como punto de referencia en diversos analisis.
 
 La data apunta a el estado general de actividad productiva, el estado financiero y/o contable de la empresa y su capital-infraestructura, la proyeccion de produccion y creciemiento, las inversiones que realiza, la cotizacion en bolsa, etc... todo esto, pertinente para tener un panorama claro del estado general de la empresa a evaluar.
 
@@ -105,7 +107,7 @@ Estas acciones en conjunto permitieron la normalizacion, formateo y estructuraci
 | ![Imagen 1](assets/grafico_nulos_1.png) | ![Imagen 2](assets/grafico_nulos_2.png) |
 | Distribucion de los valores nulos| Correlación entre valores nulos |
 
-Para completar el camino reaizado en la Extracción, Transformacion y Carga/disponibilización de los datos ponemos a disposicion dos informes concernientes a informar y detallar el estado de los datos en instancias anteriores a su proceso de ETL y posteriores al mismo:
+Para completar el camino realizado en la Extracción, Transformacion y Carga/disponibilización de los datos ponemos a disposicion dos informes concernientes a informar y detallar el estado de los datos en instancias anteriores a su proceso de ETL y posteriores al mismo:
 
 -El [Informe ETL_preliminar](notebooks/Informe_ETL_Preliminar.ipynb) proporciona un análisis detallado de la calidad y las características de los datos originales, y ofrece funciones específicas para examinar y explorar los datos en profundidad. Estas funciones incluyen la visualización de valores nulos, análisis de frecuencia de palabras, boxplots numéricos y más, lo que facilita la identificación de patrones, tendencias y relaciones significativas en los datos.
 

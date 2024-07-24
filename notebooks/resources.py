@@ -535,13 +535,6 @@ def descripcion_distribucion(df: pd.DataFrame):
 
 def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start_col: str, etiqueta_año: int):
 
-    # import pandas as pd
-    # import openpyxl
-    # import pyarrow as pa
-    # import pyarrow.parquet as pq
-
-    # import warnings
-    # warnings.filterwarnings(action= 'ignore')
 
     # Cargar el archivo Excel
     file_path = path  # path del fichero.xlsx
@@ -559,6 +552,7 @@ def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start
         # Aquí asumimos que la tabla dinámica empieza en la fila 12 y columna A (cambiar según sea necesario)
         pivot_start_row = start_row
         pivot_start_col = start_col
+
         
         # Extraer la tabla dinámica
         pivot_data = []
@@ -576,6 +570,54 @@ def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start
     return pivot_df
 
 #----------------------------------------------------------------------------------------------------
+
+def extraccion_de_tablas(path: str, n_hoja: int, start_row: int, start_col: str, end_row: int, end_col: str, etiqueta_tema: str):
+
+    # Cargar el archivo Excel
+    file_path = path  # path del fichero.xlsx
+    workbook = openpyxl.load_workbook(file_path, data_only=True) # instancio la carga del fichero en una variable
+
+    # Iterar sobre cada hoja del archivo
+    for idx, sheet_name in enumerate(workbook.sheetnames, start=1): # itero sobre cada hoja tomando como referencia las etiquetas de cada una con el metodo sheetnames
+        
+        if idx != n_hoja:  # Solo procesar la tercera hoja
+            continue
+
+        sheet = workbook[sheet_name] # instancio la hoja
+        
+        # Identificar la tabla dinámica (puedes ajustar este criterio según tu necesidad)
+        # Aquí asumimos que la tabla dinámica empieza en la fila 12 y columna A (cambiar según sea necesario)
+        pivot_start_row = start_row
+        pivot_end_row = end_row
+        pivot_start_col = start_col
+        pivot_end_col = end_col
+        
+        # Extraer la tabla dinámica
+        pivot_data = []
+        for row in sheet.iter_rows(min_row=pivot_start_row, max_row= pivot_end_row, min_col=openpyxl.utils.cell.column_index_from_string(pivot_start_col), max_col= openpyxl.utils.cell.column_index_from_string(pivot_end_col), values_only=True):
+            pivot_data.append(row)
+        
+        #transformamos la lista de listas en un array para poder manejar el index
+        pivot_data = np.array(pivot_data)
+
+        # Convertir a DataFrame de pandas
+        pivot_df = pd.DataFrame(pivot_data[1:, 1:], columns=pivot_data[0, 1:], index=pivot_data[1:, 0])
+
+        # Reemplazar valores no numéricos con NaN
+        pivot_df.replace({'n.a.': np.nan, '': np.nan}, inplace=True)
+    
+        # Convertir columnas a numéricas si es posible
+        pivot_df = pivot_df.apply(pd.to_numeric, errors='coerce')
+
+        archivo= f'../data/raw/{sheet_name}_{etiqueta_tema}.parquet'
+        pq.write_table(pa.Table.from_pandas(pivot_df, preserve_index= True), archivo)
+        
+
+    print(f'Nombre de dataframe: {sheet_name} {etiqueta_tema}')
+    return pivot_df
+
+#----------------------------------------------------------------------------------------------------
+
 
 # Renombrar columnas duplicadas
 def make_unique(column_names):
