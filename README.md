@@ -114,7 +114,7 @@ Todas estas acciones en conjunto permitieron la normalizacion, formateo y estruc
 Para completar el camino realizado en la Extracción, Transformacion y Carga/disponibilización de los datos ponemos a disposicion dos informes concernientes a informar y detallar el estado de los datos en instancias anteriores a su proceso de ETL y posteriores al mismo:
 
 <details>
-  <summary>Informe Preliminar ETL</summary>
+  <summary>Informe ETL Preliminar</summary>
   
   -El [Informe ETL_preliminar](notebooks/Informe_ETL_Preliminar.ipynb) proporciona un análisis detallado de la calidad y las características de los datos originales, y ofrece funciones específicas para examinar y explorar los datos en profundidad. Estas funciones incluyen la visualización de valores nulos, análisis de frecuencia de palabras, boxplots numéricos y más, lo que facilita la identificación de patrones, tendencias y relaciones significativas en los datos.
   
@@ -125,7 +125,7 @@ Para completar el camino realizado en la Extracción, Transformacion y Carga/dis
 
 </details>
 <details>
-  <summary>Informe Preiminar EDA</summary>
+  <summary>Informe EDA Preiminar</summary>
   
   -El [Informe EDA_preliminar](notebooks/EDA_preliminar.ipynb) hace incapie en una instancia intermedia entre la carga y disponibilizacion de los datos y su uso puntual en un informe EDA. En el utilizamos funciones que permiten ver graficamente la distribucion de valores de cada campo en cada fichero y su proporcion en el conjunto total, complementando los mismos con estadísticas básicas de los mismos los que nos permiten tener un panorama general al momento de realizar un análisis mas exhaustivo y complejo, es decir, nos permite aproximarnos a los datos de una manera general en un sentido mucho mas estadistico/analítico previo a su estudio.
   
