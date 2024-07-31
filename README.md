@@ -131,23 +131,23 @@ Para completar el camino realizado en la Extracción, Transformacion y Carga/dis
 <details>
   <summary>Otra información: Modelo ER</summary>
 
+  |                       |
+  |-----------------------|
+  | ![modelo](assets/modelo_ER.png) |
+  | Modelo Entidad-Relación |
+  
+  
   El modelo ER (Entidad-Relación) se construyó con la finalidad de proporcionar un marco estructurado a las relaciones entre las tablas provenientes de las diferentes fuentes de datos.
-
+  
   Estas relaciones en parte estaban intrínsecamente dadas para la mayor parte de los ficheros de un origen común, y en otros casos se tuvo que realizar una ingenieria en los datos, donde se construyeron campos que actuaran como PK y FK (Primary Key y Foreing Key respectivamente) para su adecuado manejo y almacenamiento o se normalizaron y/o formatearon campos para que actuaran como tales.
-
+  
   En principio, esto nos brindo además una adecuada relacion entre las diversas tablas para su visualizacion e interactividad, segmentación, filtrado y ploteo en el dashboard.
-
-|                       |
-|-----------------------|
-| ![modelo](assets/modelo_ER.png) |
-| Modelo Entidad-Relación |
-
 </details>
 
 ## EDA
 ## Dashboard
 
-Se tomó en un principio un enfoque general del contexto para luego plantear el enfoque en el análisis más específico concerniente a YPF.
+Se tomó en un principio un enfoque general del contexto para luego hacer incapié en el análisis más específico concerniente a YPF.
 
 |                       |                       |
 |-----------------------|-----------------------|
