@@ -13,6 +13,7 @@
 ![Power BI](https://img.shields.io/badge/-Power%20BI-black?style=flat-square&logo=powerbi)
 ![Power Query](https://img.shields.io/badge/-Power%20Query-black?style=flat-square&logo=powerquery)
 ![Tableu](https://img.shields.io/badge/-Tableu-black?style=flat-square&logo=tableu)
+![Microsoft Excel](https://img.shields.io/badge/-Microsoft%20Excel-black?style=flat-square&logo=excel)
 ![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
 ![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)
 ![Google Drive](https://img.shields.io/badge/-Google%20Drive-black?style=flat-square&logo=googledrive)
@@ -58,7 +59,7 @@ Los principales objetivos y condiciones en este sentido son:
 
 # Datos
 
-En Principio, los datos con los que contamos y vamos a trabajar referidos a la tematica de proyecto, son de diferentes origenes, aunque principalmente se obtienen de la plataforma web de datos publicos de la nacion (tanto en Datos Argentina como en los diferenetes ministerios o la plataforma de la nación)
+En Principio, los datos con los que contamos y vamos a trabajar referidos a la tematica de proyecto, son de diferentes origenes, aunque principalmente se obtienen de la plataforma web de datos publicos de la nacion (tanto en Datos Argentina como en los diferenetes ministerios o la plataforma de la nación).
 
 Detallamos los origenes principales:
 * https://kaggle.com/
@@ -69,9 +70,9 @@ Detallamos los origenes principales:
 * https://datos.enerdata.net/productos-petroliferos/estadisticas-consumo-mundial-petroleo-consumo-domestico.html
 * https://datos.enerdata.net/petroleo-crudo/datos-produccion-energia-mundial.html
 
-Como se hace notar, nos centramos en la data de empresas petroleras que estan asentadas en Argentina, ya que va a ser nuestro contexto de analisis (el objeto de estudio se centra principalmente en la empresa YPF), aunque complementamos la misma con algunos datos referentes al área (de hidrocarburos), en el contexto global para tomar como punto de referencia en diversos analisis.
+Como se hace notar, nos centramos en la data de empresas petroleras en un contexto general medio apuntamos a el ambito dentro de argentina (el objeto de estudio se centra principalmente en la empresa YPF), aunque complementamos la misma con algunos datos referentes al área (de hidrocarburos) de otras empresas no radicadas en Argentina, y en el contexto global apuntamos a informacion general del sector de hidrocarburos en un contexto amplio para tomar como punto de referencia en diversos analisis.
 
-La data apunta a el estado general de actividad productiva, el estado financiero y/o contable de la empresa y su capital-infraestructura, la proyeccion de produccion y creciemiento, las inversiones que realiza, la cotizacion en bolsa, etc... todo esto, pertinente para tener un panorama claro del estado general de la empresa a evaluar.
+La data apunta a el estado general de actividad productiva, el estado financiero y/o contable de la empresa y su capital-infraestructura, la proyeccion de produccion y crecimiento, las inversiones que realiza, la cotizacion en bolsa, etc... todo esto, pertinente para tener un panorama claro del estado general de la empresa a evaluar.
 
 Los datos con los que se trabaja son:
 
@@ -84,6 +85,7 @@ Los datos con los que se trabaja son:
 * Reservas de hidrocarburos en Argentina
 * Pozos registrados en el pais
 * Rentas del petroleo en Argentina (en % de PBI)
+* Informacion contable y financiera de diversas empresas de hidrocarburos
 
 Mención aparte a los informes o analisis y benchmark de la temática que utilizamos y que no se registran como datos, ya que nos sirven para tener conocimiento y guia del tema en analisis
 y poner en contexto y terminologia, asi como mecanismos y utilizacion de herramientas y logica al material de datos con el que contamos.
@@ -100,7 +102,9 @@ En la fase de Transformación de Datos (ETL), se llevaron a cabo una serie de pr
 - Verificación visual de valores atípicos: Se realizó una exploración gráfica de los datos para detectar posibles valores atípicos o anomalías que podrían afectar la integridad y la precisión de los resultados.
 - Indagación de consistencia de los datos: Se llevaron a cabo investigaciones exhaustivas sobre la consistencia de los datos, incluyendo la identificación de máximos, mínimos y rangos de valores para cada variable, lo que ayudó a garantizar la fiabilidad de los datos utilizados en el análisis.
 
-Estas acciones en conjunto permitieron la normalizacion, formateo y estructuracion de los datos que obtuvimos en referencia a la tematica. Esta serie de acciones se pueden ver en el notebook [ETL_ipynb](notebooks/ETL.ipynb) donde tambien estan comentados los cambios realizados a cada archivo y su fundamentación.
+Como paso previo, en algunos casos los ficheros presentaban un formato no adecuado para su transformacion y manipulacion directa por lo que se debia realizar una instancia previa, la extraccion de los datos en formato de tabla, para su posterior manipulación y conversión. Esto se puede ver plasmado en este [notebook](notebooks/tratamiento_ficheros_tabdinamicas.ipynb)
+
+Todas estas acciones en conjunto permitieron la normalizacion, formateo y estructuracion de los datos que obtuvimos en referencia a la tematica. Esta serie de acciones se pueden ver en el notebook [ETL_ipynb](notebooks/ETL.ipynb) donde tambien estan comentados los cambios realizados a cada archivo y su fundamentación.
 
 |                       |                       |
 |-----------------------|-----------------------|
@@ -124,11 +128,39 @@ Para completar el camino realizado en la Extracción, Transformacion y Carga/dis
 | ![Imagen 4 ](assets/distribucion_densidad.png) |
 | Distribucion de frecuencias en un campo con valores proporcionales. Podemos ver en los gráficos la distribucion y densidad de valores en conjunto con la presencia de outliers y asimetria en la distribución |
 
+<details>
+  <summary>Otra información: Modelo ER</summary>
+
+  El modelo ER (Entidad-Relación) se construyó con la finalidad de proporcionar un marco estructurado a las relaciones entre las tablas provenientes de las diferentes fuentes de datos.
+
+  Estas relaciones en parte estaban intrínsecamente dadas para la mayor parte de los ficheros de un origen común, y en otros casos se tuvo que realizar una ingenieria en los datos, donde se construyeron campos que actuaran como PK y FK (Primary Key y Foreing Key respectivamente) para su adecuado manejo y almacenamiento o se normalizaron y/o formatearon campos para que actuaran como tales.
+
+  En principio, esto nos brindo además una adecuada relacion entre las diversas tablas para su visualizacion e interactividad, segmentación, filtrado y ploteo en el dashboard.
+
+|                       |
+|-----------------------|
+| ![modelo](assets/modelo_ER.png) |
+| Modelo Entidad-Relación |
+
+</details>
 
 ## EDA
 ## Dashboard
 
-Disponibilizamos el dashboard [aquí](dashboard/Estudio_Analisis_Riesgo_Crediticio.pbix)
+Se tomó en un principio un enfoque general del contexto para luego plantear el enfoque en el análisis más específico concerniente a YPF.
+
+|                       |                       |
+|-----------------------|-----------------------|
+| ![dash 1](assets/dash_1.png) | ![dash 2](assets/dash_2.png) |
+| Análisis de producción en Argentina de petróleo y gas| Inversión en el país y cotizacion de acciones y movimiento en el mercado bursatil de la empresa YPF |
+
+
+|                       |
+|-----------------------|
+| ![Dash 3](assets/dash_3.png) |
+| Ratios de la empresa YPF del año 2024 contrastados con el año 2023 (este último representado por la linea negra en cada barra) |
+
+Disponibilizamos el dashboard para su descarga [aquí](dashboard/Estudio_Analisis_Riesgo_Crediticio.pbix).
 
 ## Modelo
 ## Deploy
