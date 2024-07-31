@@ -70,6 +70,8 @@ Detallamos los origenes principales:
 * https://datos.enerdata.net/productos-petroliferos/estadisticas-consumo-mundial-petroleo-consumo-domestico.html
 * https://datos.enerdata.net/petroleo-crudo/datos-produccion-energia-mundial.html
 
+Entre otras. Vale la pena señalar que ademas se utilizó informes e informacion relacionada a la temática del proyecto (informes contables, estudios, balances y estados de resultado de empresas del sector, otros estudios del área, auditorias estatales, etc)
+
 Como se hace notar, nos centramos en la data de empresas petroleras en un contexto general medio apuntamos a el ambito dentro de argentina (el objeto de estudio se centra principalmente en la empresa YPF), aunque complementamos la misma con algunos datos referentes al área (de hidrocarburos) de otras empresas no radicadas en Argentina, y en el contexto global apuntamos a informacion general del sector de hidrocarburos en un contexto amplio para tomar como punto de referencia en diversos analisis.
 
 La data apunta a el estado general de actividad productiva, el estado financiero y/o contable de la empresa y su capital-infraestructura, la proyeccion de produccion y crecimiento, las inversiones que realiza, la cotizacion en bolsa, etc... todo esto, pertinente para tener un panorama claro del estado general de la empresa a evaluar.
