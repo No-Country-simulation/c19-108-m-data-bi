@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 
 
-model = joblib.load('/data/modelo.pkl')
+model = joblib.load('data/modelo.pkl')
 
 # Función para realizar predicciones
 def predict_riesgo(model,RDT,RDC, RDLP, Rotación_de_Inv, Rotación_de_AT, Rotación_de_C_por_c, Margen_de_UN,
