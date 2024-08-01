@@ -535,6 +535,11 @@ def descripcion_distribucion(df: pd.DataFrame):
 
 def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start_col: str, etiqueta_año: int):
 
+    """
+    
+    
+    """
+
 
     # Cargar el archivo Excel
     file_path = path  # path del fichero.xlsx
@@ -572,6 +577,11 @@ def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start
 #----------------------------------------------------------------------------------------------------
 
 def extraccion_de_tablas(path: str, n_hoja: int, start_row: int, start_col: str, end_row: int, end_col: str, etiqueta_tema: str):
+
+    """
+    
+    
+    """
 
     # Cargar el archivo Excel
     file_path = path  # path del fichero.xlsx
@@ -621,6 +631,12 @@ def extraccion_de_tablas(path: str, n_hoja: int, start_row: int, start_col: str,
 
 # Renombrar columnas duplicadas
 def make_unique(column_names):
+
+    """
+    
+    
+    """
+
     seen = set()
     for item in column_names:
         counter = 1
@@ -632,6 +648,43 @@ def make_unique(column_names):
         yield new_item
 
 #----------------------------------------------------------------------------------------------------
+
+def asignar_etiqueta(row):
+
+    """ Asigna una etiqueta de 'riesgoso' o 'no riesgoso' basado en varias métricas financieras.
+    
+    Se acumulan puntos de riesgo basados en umbrales específicos para cada métrica.
+    Si la suma de puntos de riesgo es mayor o igual a 6, o si la liquidez corriente y la liquidez inmediata 
+    están por debajo de ciertos umbrales, se etiqueta como 'riesgoso'.
+    
+    """
+
+    puntos_riesgo = 0
+
+    if row['Liquidez Corriente'] < 1:
+        puntos_riesgo += 2
+    if row['Prueba Ácida'] < 0.5:
+        puntos_riesgo += 2
+    if row['Liquidez Inmediata'] < 0.2:
+        puntos_riesgo += 2
+    if row['Margen de U.N'] < 0.10:
+        puntos_riesgo += 1
+    if row['Rent. Sobre los A.'] < 0.20:
+        puntos_riesgo += 1
+    if row['Rent Sobre el Pat. N.'] < 0.1:
+        puntos_riesgo += 1
+    if row['Rotación de Inv.'] < 1 or row['Rotación de Inv.'] > 10:
+        puntos_riesgo += 1.5
+    if row['Rotación de A.T.'] < 0.5:
+        puntos_riesgo += 1
+    if row['Rotación de C. por c.'] < 1:
+        puntos_riesgo += 1
+
+    if puntos_riesgo < 6 or (row['Liquidez Corriente'] < 1 and row['Liquidez Inmediata'] < 0.2):
+        return 'riesgoso'
+    else:
+        return 'no riesgoso'
+
 #----------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------
 
