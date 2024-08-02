@@ -158,6 +158,36 @@ Para completar el camino realizado en la Extracción, Transformacion y Carga/dis
 </details>
 
 ## EDA
+
+Con nuestra data ya estructurada y en condiciones optimas, procedemos a la etapa de análisis de los mismos, lo que se conoce como EDA (Análisis Exploratorio de los datos).
+
+En un principio dividimos esta etapa en dos grandes áreas:
+
+- Análisis del contexto general-global.
+- Análisis del mercado doméstico o local.
+
+<details>
+  <summary>Ver más</summary>
+
+|                       |                       |
+|-----------------------|-----------------------|
+| ![dash 1](assets/dash_1.png) | ![dash 2](assets/dash_2.png) |
+| Análisis de producción en Argentina de petróleo y gas| Inversión en el país y cotizacion de acciones y movimiento en el mercado bursatil de la empresa YPF |
+
+Para acceder al análisis del contexto global, pueden ver la perspectiva técnica en el siguiente [link](notebooks/Analisis_EDA_1.ipynb)
+
+|                       |                       |
+|-----------------------|-----------------------|
+| ![dash 1](assets/dash_1.png) | ![dash 2](assets/dash_2.png) |
+| Análisis de producción en Argentina de petróleo y gas| Inversión en el país y cotizacion de acciones y movimiento en el mercado bursatil de la empresa YPF |
+
+Para acceder al análisis del contexto local, pueden ver la perspectiva técnica en el siguiente [link](notebooks/Analisis_EDA_2.ipynb)
+
+</details>
+
+Disponibilizamos el informe del análisis realizado [aquí](docs/Informe%20Completo%20Evaluación%20del%20Riesgo%20Crediticio%20de%20YPF.pdf)
+
+
 ## Dashboard
 
 Se tomó en un principio un enfoque general del contexto para luego hacer incapié en el análisis más específico concerniente a YPF.
