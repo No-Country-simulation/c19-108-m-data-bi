@@ -16,7 +16,7 @@ def predict_riesgo(model,RDT,RDC, RDLP, Rotación_de_Inv, Rotación_de_AT, Rotac
                     Rent_Sobre_los_A, Rent_Sobre_el_Pat_N, Liquidez_Corriente, Prueba_Acida, Liquidez_Inmediata]]
     prediction = model.predict(features)
 
-    return prediction[0].title()
+    return prediction[::].title()
 
 # 'RDT', 'RDC', 'RDLP', 'Rotación de Inv.', 'Rotación de A.T.', 'Rotación de C. por c.', 'Margen de U.N', 'Rent. Sobre los A.', 
 # 'Rent Sobre el Pat. N.', 'Liquidez Corriente', 'Prueba Ácida', 'Liquidez Inmediata', 'Riesgo_Crediticio'

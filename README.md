@@ -40,6 +40,11 @@
 El Banco IPB es una entidad financiera que está ofreciendo creditos para empresas a una tasa de interes muy atractiva como parte de su politica financiera y el contexto economico que se esta dando en Argentina.
 En un principio, centra su oferta de credito en los sectores que potencialmente tienen el mayor salto en el desarrollo y expansión actualmente, como son el sector hidrocarburífero, agricola, minero, de ciencias del conocimiento, etc.
 
+<p align = center>
+  <img src= 'assets/BANCO IPB.png' width= 600px >
+</p>
+
+
 Para ello, necesita un marco de análisis en conjunto con las herramientas necesarias para estimar el riesgo crediticio que conllevaria autorizar un prestamo a una empresa, lo que brindaria seguridad y garantia de pago al momento de otorgarlo.
 
 Por este motivo, nos contrata a nosotros, la consultora AyC para que le brindemos el soporte para esta toma de decisiones.
@@ -163,15 +168,47 @@ Se tomó en un principio un enfoque general del contexto para luego hacer incapi
 | Análisis de producción en Argentina de petróleo y gas| Inversión en el país y cotizacion de acciones y movimiento en el mercado bursatil de la empresa YPF |
 
 
-|                       |
-|-----------------------|
-| ![Dash 3](assets/dash_3.png) |
-| Ratios de la empresa YPF del año 2024 contrastados con el año 2023 (este último representado por la linea negra en cada barra) |
+|                       |                       |
+|-----------------------|-----------------------|
+| ![Dash 4](assets/dash_4.png) | ![Dash 3](assets/dash_3.png) |
+| Análisis del contexto general del sector en Argentina | Ratios de la empresa YPF del año 2024 contrastados con el año 2023 (este último representado por la linea negra en cada barra) |
 
 Disponibilizamos el dashboard para su descarga [aquí](dashboard/Estudio_Analisis_Riesgo_Crediticio.pbix).
 
 ## Modelo
+
+Para la construccion de nuestro modelo trabajamos con datos referentes a diferentes ratios de empresas de hidrocarburos, los cuales nos serviran para el proceso de entrenamiento del mismo.
+
+Como primer paso, se realizó un feature engineer de la data, donde se transformo a un formato adecuado y se realizó la creacion de un campo que nos sirva de variable objetivo (Target) para nuestra predicción.
+
+Este proceso esta trabajado en [feature_engineer.ipynb](notebooks/feature_engineer.ipynb), un notebook segmentado paso a paso con comentarios de cada tarea y proceso.
+
+Una vez tenemos la data en condiciones, y tenemos la elección de nuestro Target a predecir, realizamos un proceso de Grid Search, donde probamos el rendimiento de varios modelos de clasificación (nuestro target es una etiqueta), los que evaluamos con multiples hiperparametros y en el cual tambien se realiza un proceso de validación cruzada.
+
+Esto nos llevó a identificar que el modelo de Logistic Regression era el modelo que mejor rendimiento mostraba, por lo cual procedimos a su construcción, entrenamiento, testeo y puesta a punto.
+
+Como paso final, se creó una app utilizando la libreria streamlit la que nos proporciona una interfaz interactiva para nuestro modelo, como paso previo al despliegue del mismo.
+
+Ponemos a disposicion el desarrollo de nuestro modelo [aquí](notebooks/modelo.ipynb).
+
 ## Deploy
+
+Realizamos el despliegue de nuestro modelo en primer término en el servicio de Render.
+
+Se puede ver el servicio corriendo con el modelo en producción en el siguiente [link](https://c19-108-m-data-bi.onrender.com).
+
+<details>
+  <summary>Ver más</summary>
+  
+|                       |                       |
+|-----------------------|-----------------------|
+| ![Imagen 1](assets/despliegue_modelo_1.png) | ![Imagen 2](assets/despliegue_modelo_2.png) |
+> Interfaz del modelo en producción creada con streamlit y corriendo en el servicio de Render
+
+</details>
+
+También, ponemos a disposición una página web destinada a ver el informe general del proyecto, brindando datos de nuestra empresa, el servicio que se brinda, análisis y datos del desarrollo de nuestro proyecto con enlaces a los productos finales del mismo.
+
 # Tecnologías
 # Conclusiones
 # Equipo
