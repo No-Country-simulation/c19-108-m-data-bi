@@ -99,6 +99,16 @@ y poner en contexto y terminologia, asi como mecanismos y utilizacion de herrami
 
 
 # Desarrollo
+
+<details>
+<summary>Resumen Workflow</summary>
+
+<p align = center>
+  <img src= 'assets/workflow.png' width= 100% >
+</p>
+
+</details>
+
 ## ETL
 
 En la fase de Transformación de Datos (ETL), se llevaron a cabo una serie de procedimientos para garantizar la preparación adecuada y la limpieza exhaustiva de los datos antes de su carga en el almacén de datos. Estas acciones incluyeron:
@@ -171,15 +181,13 @@ En un principio dividimos esta etapa en dos grandes áreas:
 
 |                       |                       |
 |-----------------------|-----------------------|
-| ![dash 1](assets/dash_1.png) | ![dash 2](assets/dash_2.png) |
-| Análisis de producción en Argentina de petróleo y gas| Inversión en el país y cotizacion de acciones y movimiento en el mercado bursatil de la empresa YPF |
+| ![analisis 1](assets/analisis_eda_1_1.png) | ![analisis 2](assets/analisis_eda_1_3.png) |
 
 Para acceder al análisis del contexto global, pueden ver la perspectiva técnica en el siguiente [link](notebooks/Analisis_EDA_1.ipynb)
 
 |                       |                       |
 |-----------------------|-----------------------|
-| ![dash 1](assets/dash_1.png) | ![dash 2](assets/dash_2.png) |
-| Análisis de producción en Argentina de petróleo y gas| Inversión en el país y cotizacion de acciones y movimiento en el mercado bursatil de la empresa YPF |
+| ![analisis 3](assets/analisis_eda_2_1.png) | ![analisis 4](assets/analisis_eda_2_2.png) |
 
 Para acceder al análisis del contexto local, pueden ver la perspectiva técnica en el siguiente [link](notebooks/Analisis_EDA_2.ipynb)
 
@@ -240,7 +248,30 @@ Se puede ver el servicio corriendo con el modelo en producción en el siguiente 
 También, ponemos a disposición una página web destinada a ver el informe general del proyecto, brindando datos de nuestra empresa, el servicio que se brinda, análisis y datos del desarrollo de nuestro proyecto con enlaces a los productos finales del mismo.
 
 # Tecnologías
+
+<p align = center>
+  <img src= 'assets/stack.png' width= 100% >
+</p>
+
 # Conclusiones
+
+El análisis realizado revela que el mercado petrolero es altamente volátil y está sujeto a la influencia de una multitud de factores, tanto internos como externos. 
+YPF, como empresa líder en Argentina, se encuentra expuesta a estos riesgos. Si bien la compañía ha demostrado una cierta resiliencia en el pasado, su futuro 
+dependerá en gran medida de su capacidad para adaptarse a las fluctuaciones del mercado, mejorar su eficiencia operativa y diversificar sus fuentes de 
+ingresos. En este contexto, se recomienda a los acreedores evaluar cuidadosamente los riesgos asociados a la concesión de crédito a YPF y exigir 
+garantías adicionales para mitigar dichos riesgos.
+
+En conjunto con el analisis del estado financiero actual, observamos una leve mejora en la capacidad de pago inmediato y de mediano plazo con respecto a un posible credito, lo que ayuda a mejorar su capacidad de pago de un credito a futuro. Asimismo, a traves de nuestro modelo predictivo, vemos que el estado de la empresa en cuanto a pago crediticio se clasifica en su proyeccion como Riesgoso.
+
+Para cerrar con la toma de decision con respecto al otorgamiento de credito, se toma en cuenta el contexto general y perspectiva general y potencial de la empresa. Esto viene siendo tanto como consecuencia de nuestro analisis y como investigación y noticias de mercado. destacamos entre ellas:
+
+* Potencial ENORME de explotacion y produccion de recursos en reservas encontrados en Vaca Muerta, donde se estiman que esa región contiene alrededor de 3 veces las reservas totales actuales del país
+* YPF cuenta actualmente con la concesion de explotacion de casi el 50% de la explotacion en la cuenca
+* La planificacion de remodelacion del gasoducto y oleoducto Nestor Kirchner, que permitira aumentar el caudal de transito de la produccion para el pais
+* la GRAN INVERSIÓN ya planificada, y aprobada de la construccion de tratamiento de GNL por parte de YPF y la construccion de puerto autónomo para su exportación.
+
+Esto apoya nuestra conclusión final de que a pesar que el estado financiero y general de la empresa YPF para la concesión de un crédito la clasifican como Riesgosa, no podemos dejar de tomar en cuenta las proyecciones a 3-4-5 años hacia el futuro, que muestran un aumento considerable en la productividad y rentabilidad de la empresa a causa de su aumento en la explotacion, procesado y distribución-exportacion de recursos de Vaca Muerta lo que multiplicara su capacidad crediticia, volviendolo No riesgoso.
+
 # Equipo
 
 <div align="center">
